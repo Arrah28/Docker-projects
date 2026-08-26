@@ -91,4 +91,5 @@ def home():
     return render_template_string(HTML_PAGE, db_version=db_version)
 
 if __name__ == '__main__':
+    # host='0.0.0.0' allows external Docker networking to reach this app!
     app.run(host='0.0.0.0', port=5002)
