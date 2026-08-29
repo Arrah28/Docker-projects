@@ -1,0 +1,21 @@
+services:
+  mydb:
+    image: mysql:8
+    container_name: mydb
+    environment:
+      MYSQL_ROOT_PASSWORD: Arif
+    networks:
+      - custom-net
+
+  web:
+    image: 872515293031.dkr.ecr.us-east-1.amazonaws.com/web-app:latest
+    container_name: web-app-container
+    ports:
+      - "5002:5002"
+    networks:
+      - custom-net
+    depends_on:
+      - mydb
+
+networks:
+  custom-net:
