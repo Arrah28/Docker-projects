@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Helper function to connect to the Redis container via Docker DNS
 def get_redis_client():
     try:
-        # Pass the password parameter to match your docker-compose configuration
+        # Pass assword parameter to match docker-compose configuration
         client = redis.Redis(
             host='redis', 
             port=6379, 
