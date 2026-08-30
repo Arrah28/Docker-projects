@@ -18,7 +18,7 @@ def get_redis_client():
     except Exception:
         return None
 
-# An enhanced, professional dashboard updated for your Flask-Redis Multi-Container Project
+# An enhanced, professional dashboard updated for Flask-Redis Multi-Container Project
 HTML_PAGE = """
 <!DOCTYPE html>
 <html lang="en">
