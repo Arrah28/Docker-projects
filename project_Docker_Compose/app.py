@@ -84,12 +84,12 @@ def home():
         row = cur.fetchone()
         db_version = row[0]
         cur.close()
-        db.close() # Always close database connections to prevent resource leaks!
+        db.close() # CLose connections to prevent resource leaks
     except Exception as e:
         db_version = f"Connection Error: {e}"
         
     return render_template_string(HTML_PAGE, db_version=db_version)
 
 if __name__ == '__main__':
-    # host='0.0.0.0' allows external Docker networking to reach this app!
+    # host='0.0.0.0' allows external Docker networking to reach this app
     app.run(host='0.0.0.0', port=5002)
